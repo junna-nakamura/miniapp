@@ -1,0 +1,14 @@
+<div class="top-wrapper">
+  <div class="container">
+    <p>Stay hungry, stay foolish</p>
+  </div>
+</div>
+
+<div class="contents">
+  <p>死ぬまでにやりたいこと 全部で <%= @wishes.count %> 個！</p>
+  <% @wishes.each do |wish, i| %>
+    <%= render partial: "wish", locals: { wish: wish } %>
+  <% end %>
+</div>
+
+

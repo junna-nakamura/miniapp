@@ -1,0 +1,39 @@
+
+.contents{
+  height: 100%;
+  width: 1000px;
+  margin: 5px auto 0;
+  background-color: white;
+}
+
+.card {
+  width: 500px;
+  float: left;
+}
+
+.message{
+  min-height: 100px;
+  width: 598px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-bottom: none;
+}
+
+.message_box{
+  float: left;
+  height: 100px;
+  width: 505px;
+  padding: 9px 0 10px;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.check {
+  color: #ffab40;
+  cursor: pointer;
+}
+
+

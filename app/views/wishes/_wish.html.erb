@@ -1,0 +1,26 @@
+<div class="col s12 m6 offset-m3">
+  <div class="card">
+    <div class="card-content gray-darken-text text">
+      <p><%= wish.text %></p>
+    </div>
+    <div class="card-action">
+      <% if user_signed_in? && current_user.id == wish.user_id %>
+        <!-- check -->
+        <% if Check.find_by(wish_id: wish.id) %>
+          <%=link_to "/checks/#{wish.id}/destroy", method: :post do %>
+          <i class="small material-icons">check_box</i><% end%>
+        <% else%>
+          <%=link_to "/checks/#{wish.id}/create", method: :post do %>
+          <i class="small material-icons">check_box_outline_blank</i><% end%>
+        <% end%>
+        <!-- edit -->
+        <%= link_to "/wishes/#{wish.id}/edit" do %>
+        <i class="small material-icons">edit</i><% end%>
+
+        <!-- delete -->
+        <%= link_to "/wishes/#{wish.id}", method: :delete do %>
+        <i class="small material-icons">delete</i><% end%>
+      <% end%>
+    </div>
+  </div>
+</div>
